@@ -30,14 +30,20 @@ void QuickSort(int array[], int start, int end){
     }
 }
 
-int main(){
-    int array[] = { 10, 80, 30, 90, 40, 50, 70};
-
-    int size = sizeof(array)/sizeof(array[0]);
-    QuickSort(array, 0, size-1);
-
+void PrintArray(int array[], int size){
     for (int i = 0; i < size; i++) {
         cout << array[i] << " ";
     }
+}
+
+int main(){
+    //Initial array to be sorted
+    int array[] = { 10, 80, 30, 90, 40, 50, 70};
+    //Number of elements of the array
+    int size = sizeof(array)/sizeof(array[0]);
+    //Function to sort the array
+    QuickSort(array, 0, size-1);
+    //Print the array elements
+    PrintArray(array, size);
     return 0;
 }
